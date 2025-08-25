@@ -69,8 +69,8 @@ media_subpath: '/assets/img/posts/2025-08-15-PlotSPDS-bugs'
 1. ### Keywords  
 > флаги видимости и включения обрабатываются некорректно
 > 
-> проверить в 25.1
-{: .prompt-danger }
+> > проверить в 25.1
+> {: .prompt-danger }
 > 
 > ```csharp
 >     promptOptions.Keywords.Add("acDisplay", "Экран", "Экран", true, true);
