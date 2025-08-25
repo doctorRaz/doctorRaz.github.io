@@ -2,7 +2,7 @@
 title: nanoCAD баги
 description: Просто описание нанобагов, для себя, что бы не забыть и не потерять
 author: doctorraz
-date: 2026-08-24 11:00:00 +0300
+date: 2025-08-24 11:00:00 +0300
 categories: [nanoCAD, others]
 tags: [nanocad, bugs, others]
 pin: true
@@ -27,4 +27,12 @@ media_subpath: '/assets/img/posts/2025-08-15-PlotSPDS-bugs'
 
 5. ККр не умеет строить на мнимом продолжении, а также к прямым или лучам. </br>
 Не понимает в каком квадранте строить
+
+6. Поломали вызов
+```lisp
+(vl-cmdf "atr2" pause " " "0")
+;или
+(command "atr2" pause " " "0")
+```
+последний аргумент, воспринимает как новую команду((()))
 
