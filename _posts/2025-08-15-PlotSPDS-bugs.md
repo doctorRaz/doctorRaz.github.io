@@ -10,7 +10,7 @@ hidden: false
 media_subpath: '/assets/img/posts/2025-08-15-PlotSPDS-bugs'
 ---
 
-> В процессе
+> В процессе написания
 {: .prompt-danger }
  
 ## Справедливо для nanoCAD 25.1
@@ -69,6 +69,7 @@ End Sub
     promptOptions.Keywords.Add("acLimits", "лИмиты", "лИмиты", true, false);
 ```
 результат 
+
 ![com-line-visible-enabled.png](com-line-visible-enabled.png)
 
 корректно скрылись только `Границы`
