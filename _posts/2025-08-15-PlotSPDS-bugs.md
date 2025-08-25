@@ -38,3 +38,40 @@ media_subpath: '/assets/img/posts/2025-08-15-PlotSPDS-bugs'
 
 7. Некорректный экспорт листа в модель объектов мультикад, (экспортируются блоками)
 
+8. NumberOfCopies не влияет на количество копий <br>
+игнорируется свойство `NumberOfCopies`<br>
+соответственно на "железный " принтер всегда выводится одна копия.
+
+[Клуб разработчиков nanoCAD](https://forum.nanocad.ru/home/leaving?allowTrusted=1&target=https%3A%2F%2Fdeveloper.nanocad.ru%2Fredmine%2Fissues%2F854)
+
+```VB
+Sub NumberOfCopies()
+    Set objApp = GetObject(, "nanoCAD.Application")
+    Set comdoc = objApp.ActiveDocument
+    Set ActiveLayout = comdoc.ActiveLayout
+     ActiveLayout.ConfigName = "HP712" 'физический принтер
+    Set Plot = comdoc.Plot
+    Plot.NumberOfCopies = 3'количество копий
+    Plot.PlotToDevice
+End Sub
+```
+
+9. Keywords <br>
+флаги видимости и включения обрабатываются некорректно
+
+> проверить в 25.1
+{: .prompt-danger }
+
+```csharp
+    promptOptions.Keywords.Add("acDisplay", "Экран", "Экран", true, true);
+    promptOptions.Keywords.Add("acExtents", "Границы", "Границы", false, true);
+    promptOptions.Keywords.Add("Acp", "Лист", "Лист", false, false);
+    promptOptions.Keywords.Add("acLimits", "лИмиты", "лИмиты", true, false);
+```
+результат 
+![com-line-visible-enabled.png](com-line-visible-enabled.png)
+
+корректно скрылись только `Границы`
+`Лист` должен быть скрыт, но нет
+`лИмиты` `Enabled=false` не должны реагировать??? но реагируют и на мышку и на прямой ввод
+
