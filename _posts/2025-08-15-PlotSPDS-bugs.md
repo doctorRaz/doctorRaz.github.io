@@ -16,7 +16,8 @@ media_subpath: '/assets/img/posts/2025-08-15-PlotSPDS-bugs'
 ## Справедливо для nanoCAD 25.1
 
 <ol>
-<li> ### Шаблоны </li>>
+<li> <H3 id="section1"> Шаблоны </H3> </li>
+
 Список имен шаблонов, в окне выбора нет маски расширений, можно выбрать любой файл
 
 <li> ### ATTSYNC </li>
