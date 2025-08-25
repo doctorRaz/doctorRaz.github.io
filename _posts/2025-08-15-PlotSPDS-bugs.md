@@ -44,7 +44,18 @@ media_subpath: '/assets/img/posts/2025-08-15-PlotSPDS-bugs'
 
 [Клуб разработчиков nanoCAD](https://forum.nanocad.ru/home/leaving?allowTrusted=1&target=https%3A%2F%2Fdeveloper.nanocad.ru%2Fredmine%2Fissues%2F854)
 
-```vbnet
+```vb
+Sub NumberOfCopies()
+    Set objApp = GetObject(, "nanoCAD.Application")
+    Set comdoc = objApp.ActiveDocument
+    Set ActiveLayout = comdoc.ActiveLayout
+     ActiveLayout.ConfigName = "HP712" 'физический принтер
+    Set Plot = comdoc.Plot
+    Plot.NumberOfCopies = 3'количество копий
+    Plot.PlotToDevice
+End Sub
+```
+```vba
 Sub NumberOfCopies()
     Set objApp = GetObject(, "nanoCAD.Application")
     Set comdoc = objApp.ActiveDocument
