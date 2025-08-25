@@ -13,20 +13,25 @@ media_subpath: '/assets/img/posts/2025-08-15-PlotSPDS-bugs'
 > В процессе написания
 {: .prompt-danger }
  
- # H1
- ## H2
- ### H3
- #### H4
- ##### H5
- ###### H6
+ # H1ggr
+ 
+ ## H2grg
+ 
+ ### H3grgr
+ 
+ #### H4grgrg
+ 
+ ##### H5grgrg
+ 
+ ###### H6grgrgg
  
 ## nanoCAD 25.1 (beta)
 
 <ol>
-<li> <H3 id="section1"> Шаблоны </H3> </li><br>
+<li> <H3 id="template"> Шаблоны </H3> </li><br>
 Список имен шаблонов, в окне выбора нет маски расширений, можно выбрать любой файл
 
-<li> ### ATTSYNC </li> \
+<li> <h3 id="ATTSYNC"> ATTSYNC</h> </li> <br>
 по прежнему не умеет синхронизировать атрибуты у дин блоков с измененными дин параметрами
 
 </ol>
