@@ -44,7 +44,7 @@ media_subpath: '/assets/img/posts/2025-08-15-PlotSPDS-bugs'
 
 [Клуб разработчиков nanoCAD](https://forum.nanocad.ru/home/leaving?allowTrusted=1&target=https%3A%2F%2Fdeveloper.nanocad.ru%2Fredmine%2Fissues%2F854)
 
-```VisualBasic
+```vbnet
 Sub NumberOfCopies()
     Set objApp = GetObject(, "nanoCAD.Application")
     Set comdoc = objApp.ActiveDocument
